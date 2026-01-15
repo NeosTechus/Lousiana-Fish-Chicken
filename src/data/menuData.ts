@@ -189,7 +189,7 @@ export const menuCategories: MenuCategory[] = [
       { id: 39, name: "6pc Chick. Nuggets", prices: [{ size: "", price: 6.99 }], category: "Kids Meal" },
       { id: 40, name: "6pc Mozzarella Sticks", prices: [{ size: "", price: 6.99 }], category: "Kids Meal" },
       { id: 41, name: "2pc Chicken Tenders", prices: [{ size: "", price: 6.99 }], category: "Kids Meal" },
-      { id: 42, name: "Pizza Pie", prices: [{ size: "", price: 6.99 }], category: "Kids Meal", imageUrl: "/images/pictures/46.jpg" },
+      { id: 42, name: "Pizza Pie(Puff)", prices: [{ size: "", price: 6.99 }], category: "Kids Meal", imageUrl: "/images/pictures/46.jpg" },
     ],
   },
   {
@@ -213,7 +213,7 @@ export const menuCategories: MenuCategory[] = [
       { id: 51, name: "Zucchini Sticks", prices: [{ size: "(8)", price: 3.99 }, { size: "(14)", price: 5.99 }], category: "Side Orders" },
       { id: 52, name: "Breaded Mushrooms", prices: [{ size: "(8)", price: 3.99 }, { size: "(14)", price: 5.99 }], category: "Side Orders" },
       { id: 53, name: "Jalapeño Poppers", prices: [{ size: "(4)", price: 4.99 }, { size: "(8)", price: 6.99 }], category: "Side Orders" },
-      { id: 54, name: "Pizza Pie", prices: [
+      { id: 54, name: "Pizza Pie(Puff)", prices: [
         { size: "(1)", price: 3.99 },
         { size: "(2)", price: 5.99 }
       ], category: "Side Orders", ingredients: ["Beef", "Cheese", "Green Pepper"] },
