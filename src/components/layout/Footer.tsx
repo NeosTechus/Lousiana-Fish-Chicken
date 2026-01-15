@@ -37,10 +37,10 @@ export function Footer() {
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span>
-                  {restaurantInfo.address}
+                <span className="text-lg md:text-xl">
+                  <strong>{restaurantInfo.address}</strong>
                   <br />
-                  {restaurantInfo.city}
+                  <strong>{restaurantInfo.city}</strong>
                 </span>
               </a>
               <a

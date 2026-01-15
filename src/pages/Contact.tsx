@@ -7,12 +7,12 @@ export default function Contact() {
   return (
     <Layout>
       {/* Page Header */}
-      <section className="bg-card py-12 md:py-16">
+      <section className="bg-[#191714] py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Contact <span className="text-gradient-gold">Us</span>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
+            Contact <span className="text-[#ff8811]">Us</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-md mx-auto">
+          <p className="text-white text-lg max-w-md mx-auto drop-shadow">
             Visit us in South St. Louis or give us a call to place your order.
           </p>
         </div>
@@ -36,10 +36,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Address</h3>
-                    <p className="text-muted-foreground">
-                      {restaurantInfo.address}
+                    <p className="text-muted-foreground text-lg md:text-xl">
+                      <strong>{restaurantInfo.address}</strong>
                       <br />
-                      {restaurantInfo.city}
+                      <strong>{restaurantInfo.city}</strong>
                     </p>
                   </div>
                 </div>

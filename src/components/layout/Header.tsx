@@ -20,10 +20,10 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-tight">
-            <span className="font-display text-lg md:text-xl font-bold text-gradient-gold">
+            <span className="font-display text-2xl md:text-4xl font-bold text-gradient-gold">
               Louisiana
             </span>
-            <span className="font-display text-xs md:text-sm font-medium text-foreground">
+            <span className="font-display text-lg md:text-xl font-medium text-foreground">
               Fish, Chicken, Shrimp & Grill
             </span>
           </Link>
@@ -35,7 +35,7 @@ export function Header() {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-lg font-bold transition-colors hover:text-primary",
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground"

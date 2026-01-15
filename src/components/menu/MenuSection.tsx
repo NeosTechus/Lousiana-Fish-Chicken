@@ -11,18 +11,18 @@ export function MenuSection({ category }: MenuSectionProps) {
     <section className="mb-12">
       {/* Section Header */}
       <div className="mb-6">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-gradient-gold mb-2">
+        <h2 className="font-display text-2xl md:text-3xl font-extrabold text-gradient-gold mb-2">
           {category.name}
         </h2>
         {category.subtitle && (
-          <p className="text-muted-foreground text-sm md:text-base">
+          <p className="text-muted-foreground text-lg md:text-2xl font-semibold">
             {category.subtitle}
           </p>
         )}
       </div>
 
       {/* Items Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {category.items.map((item) => {
           let imageUrl: string | undefined = undefined;
           // German Chocolate Cake (id 45)
@@ -37,7 +37,7 @@ export function MenuSection({ category }: MenuSectionProps) {
               if (item.id === 43) {
                 imageUrl = `/images/pictures/35.jpg`;
               } else
-                // Cheesecake (id 42)
+                // Plain Cheesecake (id 42)
                 if (item.id === 42) {
                   imageUrl = `/images/pictures/34.jpg`;
                 } else
@@ -60,12 +60,14 @@ export function MenuSection({ category }: MenuSectionProps) {
                         imageUrl = `/images/pictures/1.jpg`;
                       } else if (item.id === 39) {
                         imageUrl = `/images/pictures/8.jpg`;
-                      } else if ([35, 36].includes(item.id) || item.id === 41) {
+                      } else if (item.id === 36) {
+                        imageUrl = `/images/pictures/64.jpg`;
+                      } else if (item.id === 35 || item.id === 41) {
                         imageUrl = `/images/pictures/6.jpg`;
                       } else if (item.id === 68) {
                         imageUrl = `/images/pictures/61.jpg`;
                       } else if (item.id === 69) {
-                        imageUrl = undefined;
+                        imageUrl = `/images/pictures/drinks.jpg`;
                       } else if (item.id === 70) {
                         imageUrl = undefined;
                       } else if (item.id === 48) {
@@ -77,7 +79,7 @@ export function MenuSection({ category }: MenuSectionProps) {
                       } else if (item.id === 51) {
                         imageUrl = `/images/pictures/43.jpg`;
                       } else if (item.id === 52) {
-                        imageUrl = `/images/pictures/44.jpg`;
+                        imageUrl = `/images/pictures/62.jpg`;
                       } else if (item.id === 53) {
                         imageUrl = `/images/pictures/45.jpg`;
                       } else if (item.id === 54) {
@@ -109,7 +111,7 @@ export function MenuSection({ category }: MenuSectionProps) {
                       } else if (item.id === 67) {
                         imageUrl = `/images/pictures/59.jpg`;
                       } else if (item.id === 38) {
-                        imageUrl = `/images/pictures/60.jpg`;
+                        imageUrl = `/images/pictures/11.jpg`;
                       }
           return (
             <MenuCard
