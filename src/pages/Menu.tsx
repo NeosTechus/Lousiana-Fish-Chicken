@@ -57,6 +57,9 @@ export default function Menu() {
             Fresh fried chicken and fish dinners, sandwiches, combos, and more. 
             All served with love.
           </p>
+          <p className="text-xs text-orange-500 mt-2 max-w-md mx-auto">
+            <strong>Note:</strong> Prices are subject to change without notice due to market conditions and unforeseen circumstances.
+          </p>
         </div>
       </section>
 

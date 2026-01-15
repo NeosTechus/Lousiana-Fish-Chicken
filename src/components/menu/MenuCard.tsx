@@ -94,38 +94,27 @@ export function MenuCard({ item, onClick, imageUrl }: MenuCardProps) {
           </table>
         ) : isCustomCombo ? (
           <>
-            <div className="flex flex-wrap gap-2 mb-2">
-              {item.prices.map((price, index) => (
-                <span
-                  key={index}
-                  className="inline-flex items-center gap-1 text-base font-semibold text-primary"
-                >
-                  {price.size && (
-                    <span className="text-muted-foreground">{price.size}:</span>
-                  )}
-                  ${price.price.toFixed(2)}
-                </span>
-              ))}
+            <div className="flex flex-col items-center mb-4">
+              <h2 className="text-2xl font-extrabold text-[#ff8811] mb-1">Create Your Combo</h2>
+              <div className="text-lg font-bold text-white bg-[#ff8811] rounded px-4 py-1 mb-2">Combo: $15.99</div>
             </div>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-1 text-sm text-muted-foreground text-center">
-              <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm text-muted-foreground text-left">
-                <div className="flex flex-col gap-y-2 pr-12">
-                  <li className="flex justify-between items-center"><span className="font-bold">Catfish Fillet</span><span className="font-bold ml-2">(2)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Tilapia</span><span className="font-bold ml-2">(2)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Ocean Perch</span><span className="font-bold ml-2">(2)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Whole Jack</span><span className="font-bold ml-2">(2)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Jack Fillet</span><span className="font-bold ml-2">(2)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Chicken Tenders</span><span className="font-bold ml-2">(2)</span></li>
-                </div>
-                <div className="flex flex-col gap-y-2 pl-12">
-                  <li className="flex justify-between items-center"><span className="font-bold">Whole Wings</span><span className="font-bold ml-2">(4)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Jumbo Shrimp</span><span className="font-bold ml-2">(4)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Regular Shrimp</span><span className="font-bold ml-2">(8)</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Catfish Nuggets</span></li>
-                  <li className="flex justify-between items-center"><span className="font-bold">Chicken Nuggets</span><span className="font-bold ml-2">(8)</span></li>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-3 text-base text-muted-foreground font-bold">
+              <div className="flex flex-col gap-y-4">
+                <div className="flex justify-between items-center"><span>Catfish Fillet</span><span>(2)</span></div>
+                <div className="flex justify-between items-center"><span>Tilapia</span><span>(2)</span></div>
+                <div className="flex justify-between items-center"><span>Ocean Perch</span><span>(2)</span></div>
+                <div className="flex justify-between items-center"><span>Whole Jack</span><span>(2)</span></div>
+                <div className="flex justify-between items-center"><span>Jack Fillet</span><span>(2)</span></div>
+                <div className="flex justify-between items-center"><span>Chicken Tenders</span><span>(2)</span></div>
               </div>
-            </ul>
+              <div className="flex flex-col gap-y-4">
+                <div className="flex justify-between items-center"><span>Whole Wings</span><span>(4)</span></div>
+                <div className="flex justify-between items-center"><span>Jumbo Shrimp</span><span>(4)</span></div>
+                <div className="flex justify-between items-center"><span>Regular Shrimp</span><span>(8)</span></div>
+                <div className="flex justify-between items-center"><span>Catfish Nuggets</span></div>
+                <div className="flex justify-between items-center"><span>Chicken Nuggets</span><span>(8)</span></div>
+              </div>
+            </div>
           </>
         ) : (
           <div className="flex flex-wrap gap-2">
