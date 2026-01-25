@@ -23,7 +23,7 @@ export default function Home() {
       >
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/60 pointer-events-none z-0" />
-        <div className="relative z-10 container mx-auto px-4 py-20 flex flex-col md:flex-row items-center min-h-[90vh]">
+        <div className="relative z-10 container mx-auto px-4 pt-2 pb-20 flex flex-col md:flex-row items-center min-h-[90vh]">
           {/* Left: Content with no background panel */}
           <div className="w-full md:w-1/2 max-w-2xl text-left md:pr-12 px-8 py-12 md:py-16 md:pl-12 md:pr-8 relative z-10">
             <h1 className="font-extrabold text-5xl sm:text-6xl md:text-7xl text-orange-400 mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
