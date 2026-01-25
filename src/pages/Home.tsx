@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Phone, MapPin, Clock, Truck } from "lucide-react";
 import { restaurantInfo } from "@/data/menuData";
-import heroImage from "/images/pictures/herosection.jpg";
+import heroImage from "/images/pictures/alt.jpg";
 
 // Use local wood texture background
 const woodBg = "/images/pictures/wood-bg.jpg";
