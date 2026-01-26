@@ -23,16 +23,15 @@ export default function Home() {
       >
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/60 pointer-events-none z-0" />
-        <div className="relative z-10 container mx-auto px-4 pt-0 pb-20 flex flex-col md:flex-row items-center min-h-[90vh]">
+        <div className="relative z-10 container mx-auto px-4 pt-2 pb-20 flex flex-col md:flex-row items-center min-h-[90vh]">
           {/* Left: Content with no background panel */}
-          <div className="w-full md:w-1/2 max-w-2xl text-left md:pr-12 px-8 py-2 md:py-4 md:pl-12 md:pr-8 relative z-10 -mt-4">
-            <h1 className="font-extrabold text-4xl sm:text-5xl md:text-6xl text-orange-400 mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          <div className="w-full md:w-1/2 max-w-2xl text-left md:pr-12 px-8 py-12 md:py-16 md:pl-12 md:pr-8 relative z-10">
+            <h1 className="font-extrabold text-5xl sm:text-6xl md:text-7xl text-orange-400 mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Louisiana
             </h1>
-            <div className="text-xl sm:text-2xl md:text-3xl text-white font-semibold mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            <div className="text-2xl sm:text-3xl md:text-4xl text-white font-semibold mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Fish, Chicken, Shrimp & Grill
             </div>
-
             {/* Removed 'Louisiana-Style Fried Chicken & Seafood' heading as requested */}
             <div className="text-xl text-yellow-300 font-semibold mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Crispy. Juicy. Always Fresh.</div>
             <p className="text-lg text-white mb-6 max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
@@ -96,11 +95,11 @@ export default function Home() {
           </div>
           {/* Right: Large Image - Responsive and Fully Visible */}
           <div className="w-full md:w-1/2 flex justify-center items-center mt-12 md:mt-0">
-            <div className="relative w-full max-w-5xl h-full flex items-center justify-center">
+            <div className="relative w-full max-w-3xl h-full flex items-center justify-center">
               <img
                 src={heroImage}
                 alt="Louisiana Fried Chicken and Fries"
-                className="object-contain w-full h-auto max-h-[90vh] md:max-h-[100vh] lg:max-h-[110vh] rounded-2xl shadow-2xl"
+                className="object-contain w-full h-auto max-h-[80vh] md:max-h-[90vh] lg:max-h-[100vh] rounded-2xl shadow-2xl"
                 style={{ background: 'none', border: 'none' }}
               />
             </div>
