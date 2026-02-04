@@ -3,10 +3,10 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Phone, MapPin, Clock, Truck } from "lucide-react";
 import { restaurantInfo } from "@/data/menuData";
-import heroImage from "/images/pictures/herosection.png";
 
 // Use local wood texture background
 const woodBg = "/images/pictures/wood-bg.jpg";
+const heroImage = "/images/pictures/herosection.png";
 
 export default function Home() {
   return (
@@ -70,15 +70,15 @@ export default function Home() {
               {/* DoorDash SVG Icon */}
               <span className="flex items-center gap-1">
                 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="28" height="16" rx="3" fill="#FF3008"/>
-                  <path d="M6 8.5C6 7.11929 7.11929 6 8.5 6H19.5C20.8807 6 22 7.11929 22 8.5C22 9.88071 20.8807 11 19.5 11H8.5C7.11929 11 6 9.88071 6 8.5Z" fill="white"/>
+                  <rect width="28" height="16" rx="3" fill="#FF3008" />
+                  <path d="M6 8.5C6 7.11929 7.11929 6 8.5 6H19.5C20.8807 6 22 7.11929 22 8.5C22 9.88071 20.8807 11 19.5 11H8.5C7.11929 11 6 9.88071 6 8.5Z" fill="white" />
                 </svg>
                 <span className="ml-1">DoorDash</span>
               </span>
               {/* Uber Eats SVG Icon */}
               <span className="flex items-center gap-1">
                 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="28" height="16" rx="3" fill="#000"/>
+                  <rect width="28" height="16" rx="3" fill="#000" />
                   <text x="4" y="12" fill="#7FFF00" fontSize="10" fontFamily="Arial" fontWeight="bold">Uber Eats</text>
                 </svg>
                 <span className="ml-1">Uber Eats</span>
@@ -86,7 +86,7 @@ export default function Home() {
               {/* Grubhub SVG Icon */}
               <span className="flex items-center gap-1">
                 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="28" height="16" rx="3" fill="#EA0027"/>
+                  <rect width="28" height="16" rx="3" fill="#EA0027" />
                   <text x="4" y="12" fill="white" fontSize="10" fontFamily="Arial" fontWeight="bold">Grubhub</text>
                 </svg>
                 <span className="ml-1">Grubhub</span>
@@ -95,12 +95,25 @@ export default function Home() {
           </div>
           {/* Right: Large Image - Responsive and Fully Visible */}
           <div className="w-full md:w-1/2 flex justify-center items-center mt-12 md:mt-0">
-            <div className="relative w-full max-w-3xl h-full flex items-center justify-center">
+            {/* Let the hero section background show through so it stays perfectly "synced" */}
+            <div className="relative w-full max-w-3xl h-full flex items-center justify-center overflow-hidden">
               <img
                 src={heroImage}
                 alt="Louisiana Fried Chicken and Fries"
-                className="object-contain w-full h-auto max-h-[80vh] md:max-h-[90vh] lg:max-h-[100vh] rounded-2xl shadow-2xl"
-                style={{ background: 'none', border: 'none' }}
+                className="relative z-10 object-contain w-full h-auto max-h-[80vh] md:max-h-[90vh] lg:max-h-[100vh]"
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  // Feather edges so the photo blends into the hero background (no visible panel seam)
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse at 70% 50%, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 94%)",
+                  maskImage:
+                    "radial-gradient(ellipse at 70% 50%, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 94%)",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskSize: "100% 100%",
+                  maskSize: "100% 100%",
+                }}
               />
             </div>
           </div>
